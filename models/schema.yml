@@ -127,10 +127,35 @@ sources:
   - name: adam_schema
     tables:
       - name: customers_training
+        freshness: 
+          warn_after:
+            count: 1
+            period: minute
+          error_after:
+            count: 2
+            period: minute
+        
       - name: customers_validation
+        freshness: 
+          warn_after:
+            count: 1
+            period: minute
+          error_after:
+            count: 2
+            period: minute
+        
       - name: orders_training
       - name: orders_validation
       - name: payments_training
       - name: payments_validation
       - name: signups_training
+        freshness: 
+          warn_after:
+            count: 1
+            period: minute
+          error_after:
+            count: 2
+            period: minute
+      
+        loaded_at_field: signup_date
       - name: signups_validation
