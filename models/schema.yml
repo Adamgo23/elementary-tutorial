@@ -126,11 +126,11 @@ models:
 sources:
   - name: adam_schema
     tables:
-      - customers_training
-      - customers_validation
-      - orders_training
-      - orders_validation
-      - payments_training
-      - payments_validation
-      - signups_training
-      - signups_validation
+      - name: customers_training
+      - name: customers_validation
+      - name: orders_training
+      - name: orders_validation
+      - name: payments_training
+      - name: payments_validation
+      - name: signups_training
+      - name: signups_validation
